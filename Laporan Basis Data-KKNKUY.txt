@@ -1,0 +1,342 @@
+﻿LAPORAN PROYEK
+KOM 205/ Basis Data
+
+
+
+
+KKN-KUY
+
+
+ 
+Dipersiapkan oleh:
+Annisa Putri Amalia                         (G24190005)
+Kokoh Dwiko Listanto                (G24190017)
+Muhammad Iqbal Susanto                (G24190023)
+Bara Taufik Pribadi                        (G24190077)
+
+
+
+
+
+
+
+
+
+
+Departemen Ilmu Komputer
+Fakultas Matematika dan Ilmu Pengetahuan Alam
+Institut Pertanian Bogor
+2021
+
+
+ logoIPBkecil 
+
+	
+
+Departemen Ilmu Komputer
+Fakultas Matematika dan IPA
+Institut Pertanian Bogor
+	Nomor Dokumen
+	Halaman
+	BASDAT – XXX
+	1/12
+	Revisi
+	
+
+	Tgl: 17/06/21
+	Daftar Isi
+
+
+
+
+1 Ringkasan        3
+2 Pendahuluan        3
+2.1        Latar Belakang        4
+2.2        Rumusan Masalah        4
+2.3        Tujuan        4
+2.4        Batasan Masalah        4
+2.5        Solusi Singkat        4
+3 Skema Basis Data        5
+3.1        Entity-Relational Diagram        5
+3.2        Diagram Skematik        5
+4 Implementasi        6
+4.1        Proses Implementasi        6
+4.2        Hasil Implementasi        8
+5 Pembagian Kerja dalam Kelompok        11
+6 Lampiran        12
+6.1        Log Activity Anggota Kelompok        12
+6.2        Dokumentasi Studi Lapangan        12
+6.3        Lain-Lain        13
+
+
+________________
+
+
+1. Ringkasan
+        Program Kuliah Kerja Nyata (KKN) adalah kegiatan wajib yang dilakukan oleh mahasiswa semester 7 sebagai bentuk pengabdian dan penerapan bidang ilmu kepada masyarakat. Aplikasi KKN-KUY merupakan aplikasi berbasis website yang menerapkan prinsip CRUD (Create Read Update Delete). Website ini dapat membuat database mahasiswa, jurusan, asal daerah yang merupakan fungsi create, dapat melihat database yang berbentuk halaman web terdiri dari data mahasiswa, jurusan, asal daerah yang merupakan fungsi read, dapat mengedit database mahasiswa, jurusan, asal daerah yang merupakan fungsi update, dan dapat menghapus database mahasiswa, jurusan, asal daerah yang merupakan fungsi delete.
+        Proyek yang kami buat sudah berhasil diimplementasikan untuk beberapa fungsi dengan sudut pandang sebagai admin. KKN-KUY berfungsi sebagai sarana pencari partner KKN yang dapat digunakan oleh mahasiswa IPB University untuk mencari partner dalam rangka melaksanakan KKN.
+2. Pendahuluan 
+   1. Latar Belakang
+        Pendidikan merupakan pondasi penting dalam pembentukan generasi penerus bangsa. Melalui pendidikan, manusia dapat mempelajari proses pendewasaan agar menjadi penerus bangsa yang memiliki karakter, kemampuan, serta tanggung-jawab dalam menjalani kehidupan. Undang-Undang Republik Indonesia Nomor 20 Tahun 2003 tentang Sistem Pendidikan Nasional pada pasal 20 ayat 2 menyatakan bahwa: “Perguruan tinggi berkewajiban menyelenggarakan pendidikan, penelitian dan pengabdian masyarakat”. 
+        Program Kuliah Kerja Nyata (KKN) adalah bentuk kegiatan pengabdian kepada masyarakat oleh mahasiswa dengan pendekatan lintas keilmuan dan sektoral pada waktu dan daerah tertentu di Indonesia. Program KKN merupakan salah satu wujud pengabdian mahasiswa kepada masyarakat. Program ini menjadi tanggung jawab Perguruan Tinggi yang tercantum dalam “Tri Dharma Perguruan Tinggi” yang terdiri dari Pendidikan dan Pengajaran, Penelitian, dan Pengabdian Masyarakat. Melalui pendidikan dan pengajaran, mahasiswa memperoleh pemahaman mengenai konsep-konsep maupun teori-teori yang sesuai dengan bidang studi yang sedang ditekuni. 
+KKN akan menunjukan keterkaitan langsung antara dunia pendidikan dan upaya perwujudan kesejahteraan masyarakat. Mahasiswa akan menguji sekaligus mengaplikasikan hasil dari proses belajarnya selama 6 semester pada masyarakat dengan kondisi yang berbeda-beda di tiap daerah. Program KKN ini diharapkan mampu memenuhi beberapa kriteria hingga dikatakan dikatakan efektif, seperti memenuhi aspek pemahaman, adanya perubahan sikap dan perilaku, serta meningkatnya keterampilan mahasiswa. 
+Mengingat pentingnya program KKN bagi mahasiswa, melatarbelakangi kami untuk membuat aplikasi KKN-KUY. KKN-KUY merupakan aplikasi berbasis website milik IPB University. Prinsip utama dari website ini adalah sebagai sarana untuk mencari partner KKN sewilayah dari semua fakultas yang ada di IPB University, mengingat pada masa pandemi ini program KKN diselenggarakan per satuan wilayah (KKN Domisili). 
+   2. Rumusan Masalah
+1. Sulitnya mencari partner KKN se-wilayah pada masa pandemi;
+2. Belum adanya aplikasi yang memberikan layanan mahasiswa untuk mencari partner KKN;
+3. Mahasiswa memerlukan perantara/sarana untuk mencari partner KKN sewilayah dalam masa pandemi;
+4. Aplikasi berbasis web bernama KKN-KUY memberikan kemudahan bagi mahasiswa dalam mencari partner KKN se-wilayah pada masa pandemi.
+   1. Tujuan
+1. Efisiensi waktu dan tenaga;
+2. Memudahkan mahasiswa dalam mencari partner KKN se-wilayah pada masa pandemi;
+3. Mahasiswa lain dengan mudah mengetahui siapa saja yang akan menjadi partner KKN-nya.
+   1. Batasan Masalah
+        Aplikasi KKN-KUY adalah aplikasi berbasis website yang dikhususkan untuk mahasiswa IPB University yang mengambil program KKN di semester 7 perkuliahan. Pengoperasian website ini hanya dapat dilakukan oleh admin karena keterbatasan ilmu dan waktu saat mengerjakan project ini. Sementara ini website belum sepenuhnya direalisasikan seperti yang tercantum di Entity Relational Diagrams (ERD) dan diagram skematik. Harapannya project ini dapat diimplementasikan lebih baik lagi agar dapat memudahkan mahasiswa dalam menemukan partner KKN.
+   2. Solusi Singkat
+        Aplikasi KKN-KUY dapat dipergunakan oleh mahasiswa IPB University. Aplikasi KKN-KUY merupakan solusi yang efisien dan efektif dalam mempermudah proses pendataan mahasiswa yang melakukan program KKN. Terdapat informasi mengenai kontak mahasiswa yang dapat dihubungi agar mempermudah komunikasi antar mahasiswa.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Skema Basis Data
+   1. Entity-Relational Diagram
+ERD atau Entity Relational Diagrams adalah konsep yang mendeskripsikan hubungan antara penyimpanan (database) dan didasarkan pada persepsi dari sebuah dunia nyata yang terdiri dari sekumpulan objek yaitu disebut sebagai entitas dan hubungan atau relasi antar objek- objek tersebut. Entitas-entitas dibentuk dari permasalahan yang sudah didefinisikan. Entitas yang terbentuk adalah admin, mahasiswa, pengumuman, dan akun. Entitas admin merupakan representasi dari staff IPB University yang mengelola data mahasiswa dalam hal menambahkan data, memperbarui data, ataupun menghapus data mahasiswa. Entitas mahasiswa memiliki atribut NIM, nama mahasiswa, jenis kelamin, program studi, asal daerah, desa tujuan KKN dan nomor WhatsApp. Entitas pengumuman memiliki atribut no. postingan, judul, postingan, tanggal dan pencarian. Entitas akun memiliki atribut username, email, dan password/ 
+Keempat entitas mempunyai hubungan atau relasi. Hubungan antara admin dengan mahasiswa adalah “mengelola” dengan kardinalitas one to many. Admin terlebih dahulu diharuskan register/login agar memiliki fungsi penuh terhadap website. Hubungan antara admin dengan pengumuman adalah “membuat” dengan kardinalitas one mandatory to many optional. Hubungan antara mahasiswa dengan pengumuman adalah “melihat” dengan kardinalitas many optional to many optional. Hubungan akun dengan mahasiswa adalah “menghubungkan” dengan kardinalitas one mandatory to one mandatory, proses login/registrasi akun dapat menjembatani ke dalam profil mahasiswa. Keempat entitas tersebut dapat dimodelkan dan dapat digunakan dalam proses pembuatan database.
+  
+
+
+
+Gambar 1 ERD KKN-Kuy
+   2. Diagram Skematik
+
+
+  
+
+
+
+Gambar 2 Diagram Skematik KKN-Kuy
+4. Implementasi
+   1. Proses Implementasi
+Sistem KKN-KUY bekerja sebagai admin yang mendapatkan fungsi penuh terhadap website ketika telah login. Proses implementasi yang dilakukan setelah database berhasil dibuat melalui phpMyAdmin, yaitu yang pertama membuat koneksi antara database yang telah dibuat dengan program dengan tujuan agar database nantinya terhubung dengan website. Menggunakan bahasa pemrograman SQL (Structured Query Language) di dalam database yang dibuat dan php (PHP: Hypertext Preprocessor) untuk merancang sebuah website dan menghubungkannya ke database. Kedua membuat website nya agar bisa melakukan operasi Create, Read, Update, Delete. Dalam website yang diberi nama KKN-KUY, Create mendefinisikan di dalam website tersebut bisa menambahkan data mahasiswa. Read mendefinisikan data mahasiswa yang selalu terupdate. Update mendefinisikan bahwa data mahasiswa didalam website KKN-KUY  dapat di edit/ diperbarui. Delete mendefinisikan data mahasiswa yang ada dapat dihapus. Berikut tampilan programnya.
+
+
+  
+
+
+
+  
+
+
+
+Berikut merupakan cara mengakses website KKN-KUY:
+1. Cara register admin
+Search alamat website KKN-kuy (via localhost)
+Mengisi username, dan confirm password
+Klik register
+2. Cara login admin
+Setelah register, klik login
+Mengisi username dan password
+Klik login
+3. Cara melihat data mahasiswa
+Setelah login, web diarahkan ke bagian Beranda yang menampilkan list data mahasiswa
+4. Cara mengubah data mahasiswa
+Klik edit di sebelah kanan dari list mahasiswa
+Perbarui data mahasiswa
+Simpan
+5. Cara menghapus data mahasiswa
+Klik hapus yang terletak di bawah fitur edit pada list data mahasiswa yang ingin dihapus
+Klik “oke”, kemudian data tersebut akan otomatis terhapus
+6. Cara search
+Jika kita ingin mencari data mahasiswa, silahkan ketik nama mahasiswa tersebut lalu klik search, kemudian akan muncul data mahasiswa yang ingin dicari. 
+7. Cara logout
+Klik logout yang terletak di sebelah kanan atas, kemudian website akan otomatis diarahkan menuju halaman login kembali. 
+   2. Hasil Implementasi
+1. Halaman register
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Halaman login
+
+
+  
+
+
+
+3. Data mahasiswa
+
+
+  
+
+
+
+  
+
+
+
+4. Fitur search
+
+
+  
+
+
+
+5. Fitur tambah data mahasiswa
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. Fitur edit data mahasiswa
+
+
+  
+
+
+
+7. Fitur hapus data mahasiswa
+
+
+  
+
+
+
+8. Fitur logout
+
+
+  
+
+
+
+
+
+5. Pembagian Kerja dalam Kelompok
+
+
+No.
+	Nama
+	Pembagian Tugas
+	1.
+	Annisa Putri Amalia
+	Membuat slide presentasi; laporan bagian pendahuluan dan finishing.
+	2.
+	Kokoh Dwiko Listanto
+	Membuat kode CRUD website dan diagram skematik.
+	3.
+	Muhammad Iqbal Susanto
+	Membuat ERD dan video presentasi.
+	4.
+	Bara Taufik Pribadi
+	Mencari referensi website; , upload youtube ,laporan bagian ringkasan dan implementasi 
+	
+
+6. Lampiran  
+   1. Log Activity Anggota Kelompok
+
+
+Waktu
+	Aktivitas
+	15 Mei 2021
+	Membuat grup whatsapp
+	1 Juni 2021
+	Menentukan topik
+	1 Juni 2021
+	Membuat link github
+	3 Juni 2021
+	Membuat dan menganalisis ERD
+	3 Juni 2021
+	Mencari referensi tampilan aplikasi berbasis web
+	3 Juni 2021
+	Membuat skema relasional
+	6 Juni 2021
+	Membuat design website
+	7- 13 Juni 2021
+	Pengodingan
+	11-14 Juni 2021
+	Pembuatan laporan
+	12 Juni 2021
+	Pembuatan slide presentasi
+	15 Juni 2021
+	Take video presentasi
+	16 Juni 2021
+	Upload video ke youtube dan laporan ke newlms
+	
+
+   2. Dokumentasi Studi Lapangan
+  
+
+  
+
+  
+
+   3. Lain-Lain
+1. Penjelasan melalui youtube dapat diakses melalui link berikut :
+
+
+
+
+2. Penjabaran kode CRUD dapat diakses melalui link berikut :
+https://github.com/annisapaaa/KKN-KUY
